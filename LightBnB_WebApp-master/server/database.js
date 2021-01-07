@@ -78,14 +78,14 @@ exports.getUserWithId = getUserWithId;
 
 const addUser = function(user) {
 
-  pool
+  return pool
   .query(`
     INSERT INTO users (name, email, password)
     VALUES ($1, $2, $3)
     RETURNING *;
   `, [user.name, user.email, user.password])
-  .then(res => res.rows)
-  .catch(err => null);
+  .then(res => res.rows[0])
+  .catch(err => console.log(err));
 
 };
 
@@ -98,9 +98,14 @@ exports.addUser = addUser;
  * @param {string} guest_id The id of the user.
  * @return {Promise<[{}]>} A promise to the reservations.
  */
+// const getAllReservations = function(guest_id, limit = 10) {
+//   return getAllProperties(null, 2);
+// }
+
 const getAllReservations = function(guest_id, limit = 10) {
   return getAllProperties(null, 2);
 }
+
 exports.getAllReservations = getAllReservations;
 
 /// Properties
