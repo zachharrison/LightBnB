@@ -28,7 +28,7 @@ VALUES
   
   'https://darrendayrealestate.com/_media/Images/01-exterior-605-wide.jpg', 
   
-  1000, 2, 4, 5, 
+  10000, 2, 4, 5, 
   
   'Canada', '100 Awesome street', 'Victoria', 'BC', 'V85 1E3', TRUE 
 ),
@@ -39,7 +39,7 @@ VALUES
   
   'https://images.dailyhive.com/20191213081409/10575714_1.jpg', 
   
-  10000, 5, 8, 12, 
+  100000, 5, 8, 12, 
   
   'Canada', '23 GOAT Ave', 'Toronto', 'ON', 'T4P 1Y6', TRUE 
 ),
